@@ -227,18 +227,18 @@ footer {
 
 /* Accordion simgesi (+ / -) eklemek için */
 .accordion:after {
-    content: "\2212"; /* Eksi işareti */
-    color: #fff;
+    content: "\002B"; /* Eksi işareti */
+    color: #777;
     font-weight: bold;
     float: right;
     margin-left: 5px;
 }
 
-.active:after {
-    content: "\2212"; /* Eksi işareti */
+/* Sadece accordion aktifse eksi işareti koy */
+.accordion.active:after {
+    content: "\2212";
     color: #fff;
 }
-
 /* Gizli İçerik Paneli */
 .panel {
     padding: 0 18px;
@@ -274,7 +274,8 @@ body.dark-mode .accordion {
     background-color: #333;
     color: #e0e0e0;
 }
-body.dark-mode .active, body.dark-mode .accordion:hover {
+/* Sadece accordion aktifse arka planı mavi yap */
+body.dark-mode .accordion.active, body.dark-mode .accordion:hover {
     background-color: var(--primary-color);
     color: #fff;
 }
