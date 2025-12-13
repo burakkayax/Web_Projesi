@@ -180,7 +180,8 @@ footer {
 
     /* JavaScript ile bu sınıf eklendiğinde menü açılacak */
     .nav-links.nav-active {
-        height: 250px; /* Açıldığındaki yükseklik */
+        height: 400px;     /* YENİ: İçeriğin sığması için yüksekliği artırdık */
+        overflow-y: auto;  /* YENİ: Eğer ekran çok küçükse kaydırma çubuğu çıksın */
     }
     
     .nav-links li {
