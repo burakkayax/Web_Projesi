@@ -29,6 +29,10 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     transition: background-color 0.3s, color 0.3s; /* Renk geçişi yumuşatma */
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* --- NAVBAR (GEZİNME ÇUBUĞU) --- */
@@ -104,10 +108,11 @@ header {
 /* --- ANA İÇERİK --- */
 main {
     padding-top: 80px; /* Header sabit olduğu için içeriği aşağı itiyoruz */
-    min-height: 80vh;
+    flex:1;
     display: flex;
     justify-content: center; /* Yatay ortalama */
     align-items: center;     /* Dikey ortalama */
+    flex-direction: column; /* İçeriklerin alt alta durması için */
 }
 
 /* Hero Section */
@@ -215,15 +220,15 @@ footer {
 }
 
 /* Aktif olduğunda veya üzerine gelindiğinde */
-.active, .accordion:hover {
+.accordion.active, .accordion:hover {
     background-color: var(--primary-color);
     color: #fff;
 }
 
 /* Accordion simgesi (+ / -) eklemek için */
 .accordion:after {
-    content: '\002B'; /* Artı işareti */
-    color: #777;
+    content: "\2212"; /* Eksi işareti */
+    color: #fff;
     font-weight: bold;
     float: right;
     margin-left: 5px;
@@ -239,9 +244,9 @@ footer {
     padding: 0 18px;
     background-color: white;
     max-height: 0; /* Başlangıçta kapalı */
-    display: none; /* JS ile block yapılacak */
+
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    transition: max-height 0.3s ease-out;
     border-radius: 0 0 5px 5px;
     margin-bottom: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);

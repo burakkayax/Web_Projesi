@@ -53,13 +53,13 @@ document.addEventListener('DOMContentLoaded', () => {
             // Başlığın hemen altındaki içerik paneli
             const panel = this.nextElementSibling;
 
-            // Eğer açıksa kapat, kapalıysa aç
-            if (panel.style.display === 'block') {
-                panel.style.display = 'none';
-            } else {
-                panel.style.display = 'block';
-            }
-        });
+            // Display yerine maxHeight kontrolü yapıyoruz
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null; // Kapat
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px"; // Aç (İçerik kadar yükseklik ver)
+        }
+    });
     }
 
     // --- 4. FORM DOĞRULAMA (VALIDATION) --- [cite: 15, 16]
