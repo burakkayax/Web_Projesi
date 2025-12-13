@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim - Kişisel Portfolyo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Adınız Soyadınız</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hakkinda.html">Hakkında</a></li>
+                <li><a href="hobiler.html">Hobiler</a></li>
+                <li><a href="iletisim.html" class="active">İletişim</a></li>
+            </ul>
+            <button id="theme-toggle">🌙 Tema</button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contact-container">
+            <h1>Bana Ulaşın</h1>
+            <p>Projelerim hakkında konuşmak veya sadece merhaba demek için formu doldurabilirsiniz.</p>
+
+            <form id="contact-form" novalidate>
+                
+                <div class="form-group">
+                    <label for="name">İsim Soyisim:</label>
+                    <input type="text" id="name" placeholder="Adınız Soyadınız">
+                    <span id="name-error" class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-posta Adresi:</label>
+                    <input type="email" id="email" placeholder="ornek@email.com">
+                    <span id="email-error" class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Mesajınız:</label>
+                    <textarea id="message" rows="5" placeholder="Mesajınızı buraya yazın..."></textarea>
+                </div>
+
+                <button type="submit" class="btn submit-btn">Gönder</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 [Adınız Soyadınız]. Web Programlama Dönem Projesi.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

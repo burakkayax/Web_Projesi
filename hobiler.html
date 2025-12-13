@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobiler - Kişisel Portfolyo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Adınız Soyadınız</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hakkinda.html">Hakkında</a></li>
+                <li><a href="hobiler.html" class="active">Hobiler</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+            <button id="theme-toggle">🌙 Tema</button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hobbies-section">
+            <h1>Hobilerim ve İlgi Alanlarım</h1>
+            <p style="text-align: center; margin-bottom: 20px;">Detayları görmek için başlıklara tıklayın.</p>
+
+            <button class="accordion">📸 Fotoğrafçılık</button>
+            <div class="panel">
+                <div class="panel-content">
+                    <img src="https://via.placeholder.com/600x300?text=Fotografcilik" alt="Fotoğrafçılık">
+                    <p>
+                        Boş zamanlarımda doğa ve şehir fotoğrafları çekmeyi seviyorum. 
+                        Özellikle ışığın ve gölgenin oluşturduğu kompozisyonlar ilgimi çekiyor. 
+                        Canon EOS serisi bir kamera kullanıyorum ve Adobe Lightroom ile düzenleme yapıyorum.
+                    </p>
+                </div>
+            </div>
+
+            <button class="accordion">✈️ Seyahat ve Gezi</button>
+            <div class="panel">
+                <div class="panel-content">
+                    <img src="https://via.placeholder.com/600x300?text=Seyahat" alt="Seyahat">
+                    <p>
+                        Yeni kültürler keşfetmek ve farklı coğrafyaları görmek benim için bir tutku. 
+                        Şimdiye kadar Türkiye'nin 7 bölgesini gezdim. Sıradaki hedefim 
+                        Avrupa turuna çıkmak ve tarihi mimarileri yerinde incelemek.
+                    </p>
+                </div>
+            </div>
+
+            <button class="accordion">💻 Kodlama ve Açık Kaynak</button>
+            <div class="panel">
+                <div class="panel-content">
+                    <img src="https://via.placeholder.com/600x300?text=Kodlama" alt="Kodlama">
+                    <p>
+                        Web teknolojileri sadece işim değil, aynı zamanda en büyük hobim. 
+                        GitHub üzerinde açık kaynak projelere katkıda bulunmayı ve 
+                        yeni çıkan JavaScript kütüphanelerini denemeyi seviyorum.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 [Adınız Soyadınız]. Web Programlama Dönem Projesi.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

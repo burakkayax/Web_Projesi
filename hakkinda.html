@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkında - Kişisel Portfolyo</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .about-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff; /* Dark mode için JS bunu ezecek veya CSS variable kullanacağız */
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        /* Dark mode uyumu için küçük bir ekleme */
+        body.dark-mode .about-container {
+            background: #1e1e1e;
+            color: #e0e0e0;
+        }
+        .section-title {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            margin-top: 30px;
+            color: var(--primary-color);
+        }
+        .skill-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill-item {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        .timeline-item {
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 3px solid #ddd;
+        }
+        .timeline-date {
+            font-size: 0.85rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Adınız Soyadınız</div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hakkinda.html" class="active">Hakkında</a></li>
+                <li><a href="hobiler.html">Hobiler</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+
+            <button id="theme-toggle">🌙 Tema</button>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="about-container">
+            <h1>Hakkımda</h1>
+            <p>
+                Merhaba! Ben [Adınız], teknolojiye tutkulu bir Web Geliştirme öğrencisiyim. 
+                Kullanıcı dostu arayüzler tasarlamayı ve temiz kod yazmayı seviyorum. 
+                Sürekli yeni şeyler öğrenmek ve kendimi geliştirmek en büyük motivasyonum.
+            </p>
+
+            <h2 class="section-title">Beceriler & Yetkinlikler</h2>
+            <ul class="skill-list">
+                <li class="skill-item">HTML5 & CSS3</li>
+                <li class="skill-item">JavaScript (ES6+)</li>
+                <li class="skill-item">Python</li>
+                <li class="skill-item">Java</li>
+                <li class="skill-item">Grafik Tasarım (Figma/Photoshop)</li>
+                <li class="skill-item">Git & GitHub</li>
+            </ul>
+
+            <h2 class="section-title">Eğitim</h2>
+            <div class="timeline-item">
+                <h3>Bilgisayar Programcılığı</h3>
+                <span class="timeline-date">2022 - Günümüz</span>
+                <p>[Üniversite Adı], [Şehir]</p>
+                <p>Web teknolojileri, veritabanı yönetimi ve nesne tabanlı programlama üzerine eğitim alıyorum.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Lise Eğitimi</h3>
+                <span class="timeline-date">2018 - 2022</span>
+                <p>[Lise Adı]</p>
+                <p>Fen Bilimleri / Bilişim Teknolojileri alanı.</p>
+            </div>
+
+            <h2 class="section-title">Deneyimler</h2>
+            <div class="timeline-item">
+                <h3>Stajyer Web Geliştirici</h3>
+                <span class="timeline-date">Yaz 2023</span>
+                <p>[Şirket Adı]</p>
+                <p>Frontend ekibinde arayüz geliştirme süreçlerine katkıda bulundum.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 [Adınız Soyadınız]. Web Programlama Dönem Projesi.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

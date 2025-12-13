@@ -1,0 +1,366 @@
+/* --- GENEL AYARLAR VE DEĞİŞKENLER --- */
+:root {
+    /* Varsayılan (Light Mode) Renkleri */
+    --primary-color: #4a90e2;
+    --bg-color: #f4f4f4;
+    --text-color: #333333;
+    --nav-bg: #ffffff;
+    --shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Source 17, 18: JavaScript ile 'dark-mode' sınıfı eklendiğinde renkler değişecek */
+body.dark-mode {
+    --primary-color: #64b5f6;
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --nav-bg: #1e1e1e;
+    --shadow: 0 2px 5px rgba(255,255,255,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s; /* Renk geçişi yumuşatma */
+}
+
+/* --- NAVBAR (GEZİNME ÇUBUĞU) --- */
+/* Source 24: Navbar sayfanın üstüne sabitlenmeli */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--nav-bg);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+}
+
+/* Source 6: Flexbox kullanımı */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+}
+
+/* Tema Butonu */
+#theme-toggle {
+    background: none;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+/* Hamburger Menü (Masaüstünde gizli) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px 0;
+}
+
+/* --- ANA İÇERİK --- */
+main {
+    padding-top: 80px; /* Header sabit olduğu için içeriği aşağı itiyoruz */
+    min-height: 80vh;
+    display: flex;
+    justify-content: center; /* Yatay ortalama */
+    align-items: center;     /* Dikey ortalama */
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 20px;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+#hero h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--nav-bg);
+    margin-top: 20px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+}
+
+/* --- RESPONSIVE DESIGN (MEDIA QUERY) --- */
+/* Source 23: Mobil cihazlar için uyumluluk */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Mobilde hamburgeri göster */
+    }
+
+    /* Source 25: Hamburger menü yapısı */
+    .nav-links {
+        position: absolute;
+        top: 70px; /* Navbar yüksekliği kadar aşağıda */
+        right: 0;
+        background-color: var(--nav-bg);
+        width: 100%;
+        height: 0; /* Başlangıçta gizli (yükseklik 0) */
+        overflow: hidden;
+        flex-direction: column; /* Linkleri alt alta diz */
+        align-items: center;
+        transition: height 0.3s ease-in-out;
+        box-shadow: var(--shadow);
+    }
+
+    /* JavaScript ile bu sınıf eklendiğinde menü açılacak */
+    .nav-links.nav-active {
+        height: 250px; /* Açıldığındaki yükseklik */
+    }
+    
+    .nav-links li {
+        margin: 15px 0;
+    }
+}
+
+/* --- ACCORDION STİLLERİ (Hobiler Sayfası İçin) --- */
+
+#hobbies-section {
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+#hobbies-section h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Accordion Butonu */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: 0.4s;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* Aktif olduğunda veya üzerine gelindiğinde */
+.active, .accordion:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Accordion simgesi (+ / -) eklemek için */
+.accordion:after {
+    content: '\002B'; /* Artı işareti */
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212"; /* Eksi işareti */
+    color: #fff;
+}
+
+/* Gizli İçerik Paneli */
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0; /* Başlangıçta kapalı */
+    display: none; /* JS ile block yapılacak */
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-radius: 0 0 5px 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.panel-content {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.panel img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Dark Mode uyumu için panel rengi */
+body.dark-mode .panel {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+}
+body.dark-mode .accordion {
+    background-color: #333;
+    color: #e0e0e0;
+}
+body.dark-mode .active, body.dark-mode .accordion:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* --- İLETİŞİM FORMU STİLLERİ --- */
+
+.contact-container {
+    max-width: 600px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.contact-container h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.contact-container p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Form elemanları */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Gönder Butonu */
+.submit-btn {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Hata Mesajları */
+.error-message {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    height: 15px; /* Hata yokken zıplamayı önlemek için */
+}
+
+/* Dark Mode Uyumu */
+body.dark-mode .contact-container {
+    background: #1e1e1e;
+    color: #e0e0e0;
+}
+
+body.dark-mode .contact-container p {
+    color: #bbb;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+    background-color: #333;
+    border: 1px solid #444;
+    color: #fff;
+}
+
+body.dark-mode .form-group input:focus, 
+body.dark-mode .form-group textarea:focus {
+    border-color: var(--primary-color);
+}
