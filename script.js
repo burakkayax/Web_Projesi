@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 2. TEMA DEĞİŞTİRİCİ (DARK/LIGHT MODE) --- [cite: 17, 18]
+    // --- 2. TEMA DEĞİŞTİRİCİ (DARK/LIGHT MODE) --- 
     const themeBtn = document.getElementById('theme-toggle');
     const body = document.body;
 
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 3. ACCORDION (İÇERİK GİZLEME/GÖSTERME) --- [cite: 19, 20]
+    // --- 3. ACCORDION (İÇERİK GİZLEME/GÖSTERME) --- 
     // Bu özellik 'Hobiler' sayfasında kullanılacak
     const accordions = document.getElementsByClassName('accordion');
 
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     }
 
-    // --- 4. FORM DOĞRULAMA (VALIDATION) --- [cite: 15, 16]
+    // --- 4. FORM DOĞRULAMA (VALIDATION) --- 
     // Bu özellik 'İletişim' sayfasında kullanılacak
     const form = document.getElementById('contact-form');
     

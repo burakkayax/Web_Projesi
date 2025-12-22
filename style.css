@@ -35,27 +35,37 @@ body {
     min-height: 100vh;
 }
 
-/* --- NAVBAR (GEZİNME ÇUBUĞU) --- */
-/* Source 24: Navbar sayfanın üstüne sabitlenmeli */
+/* --- YÜZEN NAVBAR AYARLARI --- */
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--nav-bg);
-    box-shadow: var(--shadow);
+    /* Arkaplanı şeffaf yapıyoruz ki navbar "havada" dursun */
+    background-color: transparent; 
     z-index: 1000;
+    padding-top: 20px; /* Üstten boşluk */
+    transition: all 0.3s ease;
 }
 
-/* Source 6: Flexbox kullanımı */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    max-width: 1100px;
+    padding: 0.8rem 2rem;
+    
+    /* Genişlik ve Ortalama */
+    width: 90%; 
+    max-width: 1200px;
     margin: 0 auto;
+    
+    /* Yuvarlatma ve Renkler */
+    background-color: var(--nav-bg);
+    border-radius: 20px; /* Kenarları iyice yuvarlattık */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Derinlik hissi veren gölge */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Hafif bir çerçeve */
 }
+
 
 .logo {
     font-size: 1.5rem;
