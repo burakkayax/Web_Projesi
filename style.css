@@ -1,20 +1,34 @@
 /* --- GENEL AYARLAR VE DEĞİŞKENLER --- */
+/* --- GENEL AYARLAR VE DEĞİŞKENLER --- */
 :root {
-    /* Varsayılan (Light Mode) Renkleri */
-    --primary-color: #4a90e2;
-    --bg-color: #f4f4f4;
-    --text-color: #333333;
-    --nav-bg: #ffffff;
-    --shadow: 0 2px 5px rgba(0,0,0,0.1);
+    /* Varsayılan (Light Mode) - Modern Slate & Indigo */
+    --primary-color: #4f46e5;
+    /* Daha canlı, morumsu modern bir mavi */
+    --bg-color: #f8fafc;
+    /* Dümdüz beyaz değil, çok açık soğuk gri (gözü yormaz) */
+    --text-color: #1e293b;
+    /* Tam siyah yerine koyu "Slate" grisi (daha yumuşak) */
+
+    /* Yarı saydam navbar için (Glassmorphism hazırlığı) */
+    --nav-bg: rgba(255, 255, 255, 0.85);
+
+    /* Daha modern, yumuşak bir gölge */
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-/* Source 17, 18: JavaScript ile 'dark-mode' sınıfı eklendiğinde renkler değişecek */
+/* JavaScript ile 'dark-mode' sınıfı eklendiğinde renkler değişecek */
 body.dark-mode {
-    --primary-color: #64b5f6;
-    --bg-color: #121212;
-    --text-color: #e0e0e0;
-    --nav-bg: #1e1e1e;
-    --shadow: 0 2px 5px rgba(255,255,255,0.1);
+    --primary-color: #818cf8;
+    /* Koyu modda daha parlak/pastel bir indigo */
+    --bg-color: #0f172a;
+    /* Tam siyah (#000) yerine derin gece mavisi/grisi */
+    --text-color: #f1f5f9;
+    /* Kırık beyaz */
+
+    --nav-bg: rgba(15, 23, 42, 0.85);
+    /* Arka planın şeffaf hali */
+
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -28,7 +42,8 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
-    transition: background-color 0.3s, color 0.3s; /* Renk geçişi yumuşatma */
+    transition: background-color 0.3s, color 0.3s;
+    /* Renk geçişi yumuşatma */
 
     display: flex;
     flex-direction: column;
@@ -42,9 +57,10 @@ header {
     left: 0;
     width: 100%;
     /* Arkaplanı şeffaf yapıyoruz ki navbar "havada" dursun */
-    background-color: transparent; 
+    background-color: transparent;
     z-index: 1000;
-    padding-top: 20px; /* Üstten boşluk */
+    padding-top: 20px;
+    /* Üstten boşluk */
     transition: all 0.3s ease;
 }
 
@@ -53,17 +69,25 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0.8rem 2rem;
-    
+
     /* Genişlik ve Ortalama */
-    width: 90%; 
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    
+
     /* Yuvarlatma ve Renkler */
     background-color: var(--nav-bg);
-    border-radius: 20px; /* Kenarları iyice yuvarlattık */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Derinlik hissi veren gölge */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Hafif bir çerçeve */
+    border-radius: 20px;
+    /* Kenarları iyice yuvarlattık */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    /* Derinlik hissi veren gölge */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Hafif bir çerçeve */
+
+    background-color: var(--nav-bg);
+
+    /* YENİ EKLENECEK SATIR: Arkadaki içeriği bulanıklaştırır */
+    backdrop-filter: blur(12px);
 }
 
 
@@ -86,7 +110,8 @@ header {
     transition: color 0.3s;
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--primary-color);
 }
 
@@ -117,12 +142,16 @@ header {
 
 /* --- ANA İÇERİK --- */
 main {
-    padding-top: 80px; /* Header sabit olduğu için içeriği aşağı itiyoruz */
-    flex:1;
+    padding-top: 80px;
+    /* Header sabit olduğu için içeriği aşağı itiyoruz */
+    flex: 1;
     display: flex;
-    justify-content: center; /* Yatay ortalama */
-    align-items: center;     /* Dikey ortalama */
-    flex-direction: column; /* İçeriklerin alt alta durması için */
+    justify-content: center;
+    /* Yatay ortalama */
+    align-items: center;
+    /* Dikey ortalama */
+    flex-direction: column;
+    /* İçeriklerin alt alta durması için */
 }
 
 /* Hero Section */
@@ -162,26 +191,30 @@ footer {
     padding: 20px;
     background-color: var(--nav-bg);
     margin-top: 20px;
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
 }
 
 /* --- RESPONSIVE DESIGN (MEDIA QUERY) --- */
 /* Source 23: Mobil cihazlar için uyumluluk */
 @media (max-width: 768px) {
     .hamburger {
-        display: block; /* Mobilde hamburgeri göster */
+        display: block;
+        /* Mobilde hamburgeri göster */
     }
 
     /* Source 25: Hamburger menü yapısı */
     .nav-links {
         position: absolute;
-        top: 70px; /* Navbar yüksekliği kadar aşağıda */
+        top: 70px;
+        /* Navbar yüksekliği kadar aşağıda */
         right: 0;
         background-color: var(--nav-bg);
         width: 100%;
-        height: 0; /* Başlangıçta gizli (yükseklik 0) */
+        height: 0;
+        /* Başlangıçta gizli (yükseklik 0) */
         overflow: hidden;
-        flex-direction: column; /* Linkleri alt alta diz */
+        flex-direction: column;
+        /* Linkleri alt alta diz */
         align-items: center;
         transition: height 0.3s ease-in-out;
         box-shadow: var(--shadow);
@@ -189,10 +222,12 @@ footer {
 
     /* JavaScript ile bu sınıf eklendiğinde menü açılacak */
     .nav-links.nav-active {
-        height: 400px;     /* YENİ: İçeriğin sığması için yüksekliği artırdık */
-        overflow-y: auto;  /* YENİ: Eğer ekran çok küçükse kaydırma çubuğu çıksın */
+        height: 400px;
+        /* YENİ: İçeriğin sığması için yüksekliği artırdık */
+        overflow-y: auto;
+        /* YENİ: Eğer ekran çok küçükse kaydırma çubuğu çıksın */
     }
-    
+
     .nav-links li {
         margin: 15px 0;
     }
@@ -230,14 +265,16 @@ footer {
 }
 
 /* Aktif olduğunda veya üzerine gelindiğinde */
-.accordion.active, .accordion:hover {
+.accordion.active,
+.accordion:hover {
     background-color: var(--primary-color);
     color: #fff;
 }
 
 /* Accordion simgesi (+ / -) eklemek için */
 .accordion:after {
-    content: "\002B"; /* Eksi işareti */
+    content: "\002B";
+    /* Eksi işareti */
     color: #777;
     font-weight: bold;
     float: right;
@@ -249,17 +286,19 @@ footer {
     content: "\2212";
     color: #fff;
 }
+
 /* Gizli İçerik Paneli */
 .panel {
     padding: 0 18px;
     background-color: white;
-    max-height: 0; /* Başlangıçta kapalı */
+    max-height: 0;
+    /* Başlangıçta kapalı */
 
     overflow: hidden;
     transition: max-height 0.3s ease-out;
     border-radius: 0 0 5px 5px;
     margin-bottom: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .panel-content {
@@ -272,7 +311,7 @@ footer {
     height: auto;
     border-radius: 5px;
     margin-bottom: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Dark Mode uyumu için panel rengi */
@@ -280,12 +319,15 @@ body.dark-mode .panel {
     background-color: #2c2c2c;
     color: #e0e0e0;
 }
+
 body.dark-mode .accordion {
     background-color: #333;
     color: #e0e0e0;
 }
+
 /* Sadece accordion aktifse arka planı mavi yap */
-body.dark-mode .accordion.active, body.dark-mode .accordion:hover {
+body.dark-mode .accordion.active,
+body.dark-mode .accordion:hover {
     background-color: var(--primary-color);
     color: #fff;
 }
@@ -299,7 +341,7 @@ body.dark-mode .accordion.active, body.dark-mode .accordion:hover {
     padding: 30px;
     background: #fff;
     border-radius: 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .contact-container h1 {
@@ -356,7 +398,8 @@ body.dark-mode .accordion.active, body.dark-mode .accordion:hover {
     display: block;
     margin-top: 5px;
     font-size: 0.9rem;
-    height: 15px; /* Hata yokken zıplamayı önlemek için */
+    height: 15px;
+    /* Hata yokken zıplamayı önlemek için */
 }
 
 /* Dark Mode Uyumu */
@@ -376,61 +419,69 @@ body.dark-mode .form-group textarea {
     color: #fff;
 }
 
-body.dark-mode .form-group input:focus, 
+body.dark-mode .form-group input:focus,
 body.dark-mode .form-group textarea:focus {
     border-color: var(--primary-color);
 }
 
- .about-container {
-            max-width: 800px;
-            width: 90%;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff; /* Dark mode için JS bunu ezecek veya CSS variable kullanacağız */
-            border-radius: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        /* Dark mode uyumu için küçük bir ekleme */
-        body.dark-mode .about-container {
-            background: #1e1e1e;
-            color: #e0e0e0;
-        }
-        .section-title {
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            margin-top: 30px;
-            color: var(--primary-color);
-        }
-        .skill-list {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .skill-item {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
-        .timeline-item {
-            margin-bottom: 20px;
-            padding-left: 15px;
-            border-left: 3px solid #ddd;
-        }
-        .timeline-date {
-            font-size: 0.85rem;
-            color: #777;
-        }
+.about-container {
+    max-width: 800px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    /* Dark mode için JS bunu ezecek veya CSS variable kullanacağız */
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 
-        /* Sayfa Yükleme Animasyonu */
+/* Dark mode uyumu için küçük bir ekleme */
+body.dark-mode .about-container {
+    background: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.section-title {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    color: var(--primary-color);
+}
+
+.skill-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-item {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.timeline-item {
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 3px solid #ddd;
+}
+
+.timeline-date {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* Sayfa Yükleme Animasyonu */
 @keyframes fadeInUp {
     from {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -438,7 +489,9 @@ body.dark-mode .form-group textarea:focus {
 }
 
 /* Bu sınıfı animasyon uygulamak istediğin kapsayıcılara (örneğin main içindeki section'lara) verebilirsin */
-main section, .about-container, .contact-container {
+main section,
+.about-container,
+.contact-container {
     animation: fadeInUp 0.8s ease-out;
 }
 
@@ -451,9 +504,53 @@ main section, .about-container, .contact-container {
 .hamburger.toggle span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
+
 .hamburger.toggle span:nth-child(2) {
     opacity: 0;
 }
+
 .hamburger.toggle span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* --- ANA SAYFA VE HOBİLER İÇİN KUTU GÖRÜNÜMÜ --- */
+
+/* Hakkında ve İletişim sayfasındaki kutu stilini buraya da uygulamak için */
+#hero,
+#hobbies-section {
+    max-width: 800px;
+    /* Genişlik sınırı */
+    width: 90%;
+    /* Mobilde kenarlardan boşluk kalsın */
+    margin: 40px auto;
+    /* Sayfanın ortasında dursun, üstten boşluk bırakalım */
+    padding: 40px;
+    /* İçerik kenarlara yapışmasın */
+
+    /* Çerçeve ve Gölge Efektleri */
+    background: #fff;
+    border-radius: 20px;
+    /* Yuvarlatılmış köşeler */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Hafif gölge */
+
+    /* Dark Mode Geçişi İçin */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Ana Sayfa içeriğini ortalı tutmak için */
+#hero {
+    text-align: center;
+}
+
+/* --- DARK MODE UYUMU --- */
+/* Karanlık mod açıldığında bu kutuların rengini değiştir */
+body.dark-mode #hero,
+body.dark-mode #hobbies-section {
+    background: #1e1e1e;
+    /* Koyu gri arka plan */
+    color: #e0e0e0;
+    /* Açık renk yazı */
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+    /* Dark mode için hafif parlama */
 }
