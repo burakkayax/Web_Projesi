@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
             } else {
                 // Form geçerliyse kullanıcıya bilgi ver (Demo amaçlı)
-                alert('Mesajınız başarıyla gönderildi (Simülasyon)!');
+                alert('Mesajınız başarıyla gönderildi!');
             }
         });
     }
