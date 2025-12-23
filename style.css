@@ -1,5 +1,8 @@
 /* --- GENEL AYARLAR VE DEĞİŞKENLER --- */
-/* --- GENEL AYARLAR VE DEĞİŞKENLER --- */
+html {
+    scroll-behavior: smooth;  /*Sayfa içinde bir linke tıklandığında sayfa aniden oraya atlamak yerine yumuşakça kayar*/
+}
+
 :root {
     /* Varsayılan (Light Mode) - Modern Slate & Indigo */
     --primary-color: #4f46e5;
@@ -200,6 +203,14 @@ footer {
     .hamburger {
         display: block;
         /* Mobilde hamburgeri göster */
+    }
+
+    #hero h1,
+    .contact-container h1,
+    .about-container h1,
+    #hobbies-section h1 {
+        font-size: 2rem;
+        /* 3rem yerine 2rem'e düşür */
     }
 
     /* Source 25: Hamburger menü yapısı */
@@ -429,7 +440,7 @@ body.dark-mode .form-group textarea:focus {
     max-width: 800px;
     width: 90%;
     margin: 20px auto;
-    padding: 20px;
+    padding: 40px;
     background: #fff;
     /* Dark mode için JS bunu ezecek veya CSS variable kullanacağız */
     border-radius: 20px;
@@ -555,3 +566,12 @@ body.dark-mode #hobbies-section {
     box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
     /* Dark mode için hafif parlama */
 }
+
+.social-links { margin-top: 10px; }
+.social-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.social-links a:hover { color: var(--text-color); }
