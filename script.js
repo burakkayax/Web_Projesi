@@ -1,17 +1,22 @@
 // Sayfanın tamamen yüklenmesini bekle (Hataları önlemek için)
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- 1. MOBİL MENÜ (HAMBURGER MENU) --- [cite: 25]
+    // --- 1. MOBİL MENÜ (HAMBURGER MENU) --- 
     const burger = document.querySelector('.hamburger');
     const nav = document.querySelector('.nav-links');
+    const header = document.querySelector('header'); // YENİ: Header'ı seçtik
 
     if (burger) {
         burger.addEventListener('click', () => {
             // CSS'te tanımladığımız .nav-active sınıfını aç/kapat
             nav.classList.toggle('nav-active');
 
-            // Hamburger ikonuna animasyon eklemek için (Opsiyonel)
+            // Hamburger ikonuna animasyon eklemek için 
             burger.classList.toggle('toggle');
+
+            // YENİ: Menü açılınca Header'ın stilini değiştirmek için sınıf ekle
+            header.classList.toggle('menu-active');
+
         });
     }
 

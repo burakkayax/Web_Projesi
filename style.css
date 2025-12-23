@@ -295,6 +295,29 @@ footer {
         background-color: rgba(15, 23, 42, 0.98) !important;
     }
 
+    /* Menü açıldığında Header'ın üst boşluğunu sıfırla */
+    header.menu-active {
+        padding-top: 0;
+    }
+
+    /* Menü açıldığında Navbar'ı tam ekran yap ve köşeleri düzleştir */
+    header.menu-active .navbar {
+        width: 100%;
+        /* Tam genişlik */
+        border-radius: 0;
+        /* Köşeleri sivri yap */
+        background-color: var(--nav-bg);
+        /* Arka planı garantiye al */
+        backdrop-filter: blur(15px);
+        /* Bulanıklığı koru/arttır */
+    }
+}
+
+/* Navbar'ın genişlerken yumuşak geçiş yapması için (Genel bölüme ekle) */
+.navbar {
+    /* Mevcut kodlarının altına bu satırı ekle */
+    transition: all 0.3s ease;
+
 }
 
 /* --- ACCORDION STİLLERİ (Hobiler Sayfası İçin) --- */
