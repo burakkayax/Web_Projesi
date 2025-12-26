@@ -1,4 +1,4 @@
-/* --- GENEL AYARLAR VE DEĞİŞKENLER --- */
+/* GENEL AYARLAR VE DEĞİŞKENLER */
 html {
     scroll-behavior: smooth;
     /*Sayfa içinde bir linke tıklandığında sayfa aniden oraya atlamak yerine yumuşakça kayar*/
@@ -10,14 +10,14 @@ html {
     --bg-color: #ecfdf5;
     --text-color: #064e3b;
 
-    /* Yarı saydam navbar için (Glassmorphism hazırlığı) */
+    /* Yarı saydam navbar için (Glassmorphism için) */
     --nav-bg: rgba(255, 255, 255, 0.75);
 
     /* Daha modern, yumuşak bir gölge */
     --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-/* JavaScript ile 'dark-mode' sınıfı eklendiğinde renkler değişecek */
+/* JavaScript ile dark-mode sınıfı eklendiğinde renkler değişecek */
 body.dark-mode {
     --primary-color: #34d399;
     --bg-color: #111827;
@@ -30,7 +30,7 @@ body.dark-mode {
     --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
 }
 
-/* --- 2. EVRENSEL SIFIRLAMA (GLOBAL RESET) --- */
+/* EVRENSEL SIFIRLAMA (GLOBAL RESET) */
 /* Tüm elementleri (*) hedefler. Tarayıcı farklarını sıfırlar. */
 * {
     /* Varsayılan dış ve iç boşlukları sıfırlar */
@@ -58,7 +58,7 @@ body {
     min-height: 100vh;
 }
 
-/* --- YÜZEN NAVBAR AYARLARI --- */
+/* YÜZEN NAVBAR AYARLARI */
 header {
     /* Menüyü sayfanın en tepesine ÇİVİLEMEK (sabitlemek) için kullanılır.
        Sayfa aşağı kaydırılsa bile menü ekrandan gitmez, kullanıcıyı takip eder. */
@@ -71,7 +71,7 @@ header {
     /* Arkaplanı şeffaf yapıyoruz ki navbar "havada" dursun */
     background-color: transparent;
 
-    /* --- KATMAN SIRASI (Z-INDEX) --- */
+    /* KATMAN SIRASI (Z-INDEX) */
     /* Menünün, sayfadaki diğer tüm elemanların (resimler, yazılar) ÜSTÜNDE kalmasını sağlar.
        Değer ne kadar yüksekse o kadar üsttedir. (1000 güvenli bir sayıdır) */
     z-index: 1000;
@@ -157,7 +157,7 @@ header {
     margin: 5px 0;
 }
 
-/* --- ANA İÇERİK --- */
+/* ANA İÇERİK */
 main {
     padding-top: 80px;
     /* Header sabit olduğu için içeriği aşağı itiyoruz */
@@ -202,7 +202,7 @@ main {
     opacity: 0.9;
 }
 
-/* --- FOOTER --- */
+/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
@@ -211,9 +211,9 @@ footer {
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
 }
 
-/* --- RESPONSIVE DESIGN (MEDIA QUERY) --- */
-/* Source 23: Mobil cihazlar için uyumluluk */
-/* --- RESPONSIVE DESIGN (MOBİL UYUMLULUK) --- */
+/* RESPONSIVE DESIGN (MEDIA QUERY) */
+/* Mobil cihazlar için */
+/*RESPONSIVE DESIGN */
 @media (max-width: 768px) {
     .hamburger {
         display: block;
@@ -278,7 +278,7 @@ footer {
         transform: translateY(0);
     }
 
-    /* Link Fontlarını Büyüt (Mobil için daha okunaklı) */
+    /* Link Fontlarını Büyüt (daha okunaklı) */
     .nav-links a {
         font-size: 1.5rem;
         font-weight: bold;
@@ -286,7 +286,7 @@ footer {
 
     /* Açık Tema (Light Mode) için Mobil Menü Rengi */
     .nav-links {
-        /* Normalde 0.85 idi, bunu 0.98 yaparak arkasını göstermemesini sağladık */
+        /* Normalde 0.85 idi, bunu 0.98 yaparak arkasını göstermemesini sağladım */
         background-color: rgba(255, 255, 255, 0.98) !important;
     }
 
@@ -313,14 +313,13 @@ footer {
     }
 }
 
-/* Navbar'ın genişlerken yumuşak geçiş yapması için (Genel bölüme ekle) */
+/* Navbar'ın genişlerken yumuşak geçiş yapması için */
 .navbar {
-    /* Mevcut kodlarının altına bu satırı ekle */
     transition: all 0.3s ease;
 
 }
 
-/* --- ACCORDION STİLLERİ (Hobiler Sayfası İçin) --- */
+/* ACCORDION STİLLERİ (Hobiler İçin) */
 
 #hobbies-section {
     max-width: 800px;
@@ -342,7 +341,7 @@ footer {
     padding: 18px;
     width: 100%;
     border: none;
-    text-align: left;
+    text-align: center;
     outline: none;
     font-size: 1.1rem;
     font-weight: bold;
@@ -368,7 +367,7 @@ footer {
     margin-left: 5px;
 }
 
-/* Sadece accordion aktifse eksi işareti koy */
+/* Sadece accordion aktifse eksi koy */
 .accordion.active:after {
     content: "\2212";
     color: #fff;
@@ -419,7 +418,7 @@ body.dark-mode .accordion:hover {
     color: #fff;
 }
 
-/* --- İLETİŞİM FORMU STİLLERİ --- */
+/* İLETİŞİM FORMU STİLLERİ */
 
 .contact-container {
     max-width: 600px;
@@ -518,7 +517,7 @@ body.dark-mode .form-group textarea:focus {
     margin: 20px auto;
     padding: 40px;
     background: #fff;
-    /* Dark mode için JS bunu ezecek veya CSS variable kullanacağız */
+    /* Dark mode için JS bunu ezecek veya CSS variable kullanacaksın */
     border-radius: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -576,7 +575,7 @@ body.dark-mode .about-container {
     }
 }
 
-/* Bu sınıfı animasyon uygulamak istediğin kapsayıcılara (örneğin main içindeki section'lara) verebilirsin */
+/* Bu sınıfı animasyon uygulamak istediğin kapsayıcılara (örneğin main içindeki sectionlara) ver */
 main section,
 .about-container,
 .contact-container {
@@ -588,7 +587,7 @@ main section,
     transition: all 0.3s ease;
 }
 
-/* JS ile 'toggle' sınıfı eklendiğinde devreye girer */
+/* JS ile toggle sınıfı eklendiğinde devreye girer */
 .hamburger.toggle span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -601,9 +600,9 @@ main section,
     transform: rotate(-45deg) translate(7px, -6px);
 }
 
-/* --- ANA SAYFA VE HOBİLER İÇİN KUTU GÖRÜNÜMÜ --- */
+/* ANA SAYFA VE HOBİLER İÇİN KUTU GÖRÜNÜMÜ */
 
-/* Hakkında ve İletişim sayfasındaki kutu stilini buraya da uygulamak için */
+/* kutu stilini buraya da uygulamak için */
 #hero,
 #hobbies-section {
     max-width: 800px;
@@ -631,7 +630,7 @@ main section,
     text-align: center;
 }
 
-/* --- DARK MODE UYUMU --- */
+/* DARK MODE UYUMU */
 /* Karanlık mod açıldığında bu kutuların rengini değiştir */
 body.dark-mode #hero,
 body.dark-mode #hobbies-section {

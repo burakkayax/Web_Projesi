@@ -1,14 +1,14 @@
-// Sayfanın tamamen yüklenmesini bekle (Hataları önlemek için)
+// Sayfanın tamamen yüklenmesini bekle (Hataları olmasın diye)
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- 1. MOBİL MENÜ (HAMBURGER MENU) --- 
+    // HAMBURGER MENU
     const burger = document.querySelector('.hamburger');
     const nav = document.querySelector('.nav-links');
-    const header = document.querySelector('header'); // YENİ: Header'ı seçtik
+    const header = document.querySelector('header'); // Headerı seçtik
 
     if (burger) {
         burger.addEventListener('click', () => {
-            // CSS'te tanımladığımız .nav-active sınıfını aç/kapat
+            // CSS'te tanımladığım .nav-active sınıfını aç/kapat
             nav.classList.toggle('nav-active');
 
             // Hamburger ikonuna animasyon eklemek için 
@@ -20,11 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 2. TEMA DEĞİŞTİRİCİ (DARK/LIGHT MODE) --- 
+    // TEMA DEĞİŞTİRİCİ 
     const themeBtn = document.getElementById('theme-toggle');
     const body = document.body;
 
-    // Kullanıcının tercihini hatırla (Local Storage)
+    // Kullanıcının tercihini hatırla (Local Storage, sınıfın kullandığı zımbırtı)
     const currentTheme = localStorage.getItem('theme');
     if (currentTheme === 'dark') {
         body.classList.add('dark-mode');
@@ -46,19 +46,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 3. ACCORDION (İÇERİK GİZLEME/GÖSTERME) --- 
+    // ACCORDION (İÇERİK GİZLEME/GÖSTERME) 
     // Bu özellik 'Hobiler' sayfasında kullanılacak
     const accordions = document.getElementsByClassName('accordion');
 
     for (let i = 0; i < accordions.length; i++) {
         accordions[i].addEventListener('click', function () {
-            // Tıklanan başlığa 'active' sınıfı ekle (stil için)
+            // Tıklanan başlığa active sınıfı ekle (stil için)
             this.classList.toggle('active');
 
             // Başlığın hemen altındaki içerik paneli
             const panel = this.nextElementSibling;
 
-            // Display yerine maxHeight kontrolü yapıyoruz
+            // Display yerine maxHeight kontrolü yapıyor
             if (panel.style.maxHeight) {
                 panel.style.maxHeight = null; // Kapat
             } else {
@@ -67,8 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 4. FORM DOĞRULAMA (VALIDATION) --- 
-    // Bu özellik 'İletişim' sayfasında kullanılacak
+    // FORM DOĞRULAMA 
+    // Bu özellik İletişim sayfasında kullanılacak
     const form = document.getElementById('contact-form');
 
     if (form) {
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!isValid) {
                 e.preventDefault();
             } else {
-                // Form geçerliyse kullanıcıya bilgi ver (Demo amaçlı)
+                // Form geçerliyse kullanıcıya bilgi ver 
                 alert('Mesajınız başarıyla gönderildi!');
             }
         });
