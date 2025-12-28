@@ -4,17 +4,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // HAMBURGER MENU
     const burger = document.querySelector('.hamburger');
     const nav = document.querySelector('.nav-links');
-    const header = document.querySelector('header'); // Headerı seçtik
+    const header = document.querySelector('header'); 
 
     if (burger) {
         burger.addEventListener('click', () => {
             // CSS'te tanımladığım .nav-active sınıfını aç/kapat
             nav.classList.toggle('nav-active');
 
-            // Hamburger ikonuna animasyon eklemek için 
+            // Hamburger ikonunu çarpı animasyon 
             burger.classList.toggle('toggle');
 
-            // YENİ: Menü açılınca Header'ın stilini değiştirmek için sınıf ekle
+            // Menü açılınca Header'ın stilini değiştirmek için sınıf ekledim
             header.classList.toggle('menu-active');
 
         });
@@ -58,17 +58,17 @@ document.addEventListener('DOMContentLoaded', () => {
             // Başlığın hemen altındaki içerik paneli
             const panel = this.nextElementSibling;
 
-            // Display yerine maxHeight kontrolü yapıyor
+            // Display yerine maxHeight kontrolü yapıyor, animasyon için
             if (panel.style.maxHeight) {
                 panel.style.maxHeight = null; // Kapat
             } else {
-                panel.style.maxHeight = panel.scrollHeight + "px"; // Aç (İçerik kadar yükseklik ver)
+                panel.style.maxHeight = panel.scrollHeight + "px"; // paneli açar, içerik kadar yükseklik verir
             }
         });
     }
 
     // FORM DOĞRULAMA 
-    // Bu özellik İletişim sayfasında kullanılacak
+    // İletişim sayfası için
     const form = document.getElementById('contact-form');
 
     if (form) {
