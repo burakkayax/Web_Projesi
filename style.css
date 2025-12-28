@@ -10,7 +10,7 @@ html {
     --bg-color: #ecfdf5;
     --text-color: #064e3b;
 
-    /* Yarı saydam navbar için (Glassmorphism için) */
+    /* Yarı saydam navbar için, Glassmorphism */
     --nav-bg: rgba(255, 255, 255, 0.75);
 
     /* Daha modern, yumuşak bir gölge */
@@ -44,36 +44,34 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
-    /* Satırlar arası boşluğu açarak metnin okunmasını kolaylaştırır */
+    /* Satırlar arası boşluğu açar */
     line-height: 1.6;
-    /* Tema değişirken renklerin aniden değil, yumuşakça (0.3sn) değişmesini sağlar */
+    /* Tema değişirken renklerin aniden değil, yumuşakça değişmesini sağlar */
     transition: background-color 0.3s, color 0.3s;
 
     /* Sayfa düzenini esnek kutu (Flexbox) modeline çevirir */
     display: flex;
     /* İçerikleri (Header, Main, Footer) alt alta dizer */
     flex-direction: column;
-    /* Sayfa içeriği az olsa bile gövdenin en az ekran boyu (100vh) kadar olmasını sağlar.
+    /* Sayfa içeriği az olsa bile gövdenin en az ekran boyu kadar olmasını sağlar.
        Böylece Footer her zaman en altta kalır. */
     min-height: 100vh;
 }
 
 /* YÜZEN NAVBAR AYARLARI */
 header {
-    /* Menüyü sayfanın en tepesine ÇİVİLEMEK (sabitlemek) için kullanılır.
-       Sayfa aşağı kaydırılsa bile menü ekrandan gitmez, kullanıcıyı takip eder. */
+    /* Menüyü sayfanın en tepesine sabitlemek için kullanılır. */
     position: fixed;
-    /* Sayfanın sol en üst köşesinden başlatıyoruz */
+    /* Sayfanın sol en üst köşesinden başlatıyor */
     top: 0;
     left: 0;
     /* Genişliği ekranın tamamı kadar olsun */
     width: 100%;
-    /* Arkaplanı şeffaf yapıyoruz ki navbar "havada" dursun */
+    /* Arkaplanı şeffaf yapıyor ki navbar havada dursun */
     background-color: transparent;
 
     /* KATMAN SIRASI (Z-INDEX) */
-    /* Menünün, sayfadaki diğer tüm elemanların (resimler, yazılar) ÜSTÜNDE kalmasını sağlar.
-       Değer ne kadar yüksekse o kadar üsttedir. (1000 güvenli bir sayıdır) */
+    /* Menünün, sayfadaki diğer tüm elemanların (resimler, yazılar) Üstünde kalmasını sağlar. */
     z-index: 1000;
 
     /* Üstten boşluk */
@@ -160,7 +158,7 @@ header {
 /* ANA İÇERİK */
 main {
     padding-top: 80px;
-    /* Header sabit olduğu için içeriği aşağı itiyoruz */
+    /* Header sabit olduğu için içeriği aşağı itiyor */
     flex: 1;
     display: flex;
     justify-content: center;
@@ -293,6 +291,7 @@ footer {
     /* Dark Mode için mobil Menü Rengi */
     body.dark-mode .nav-links {
         background-color: rgba(15, 23, 42, 0.98) !important;
+        /* important diğer kuralları geçersiz kılar, burda masaüstü halini yoksay mobilde bunu uygula demek */
     }
 
     /* Menü açıldığında Header'ın üst boşluğunu sıfırla */
@@ -357,10 +356,10 @@ footer {
     color: #fff;
 }
 
-/* Accordion simgesi (+ / -) eklemek için */
+/* Accordion simgesi, artı ve eksiyi burda yarattım */
 .accordion:after {
     content: "\002B";
-    /* Eksi işareti */
+    /* artı işareti ama unicode */
     color: #777;
     font-weight: bold;
     float: right;
@@ -370,6 +369,7 @@ footer {
 /* Sadece accordion aktifse eksi koy */
 .accordion.active:after {
     content: "\2212";
+    /* eksi işareti ama unicode */
     color: #fff;
 }
 
@@ -382,6 +382,7 @@ footer {
 
     overflow: hidden;
     transition: max-height 0.3s ease-out;
+    /* ease-out ile yavaşlayarak bitirdim */
     border-radius: 10px;
     margin-bottom: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
