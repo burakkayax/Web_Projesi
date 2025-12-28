@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // HAMBURGER MENU
     const burger = document.querySelector('.hamburger');
     const nav = document.querySelector('.nav-links');
-    const header = document.querySelector('header'); 
+    const header = document.querySelector('header');
 
     if (burger) {
         burger.addEventListener('click', () => {
@@ -46,8 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ACCORDION (İÇERİK GİZLEME/GÖSTERME) 
-    // Bu özellik 'Hobiler' sayfasında kullanılacak
+    // ACCORDION  
     const accordions = document.getElementsByClassName('accordion');
 
     for (let i = 0; i < accordions.length; i++) {
@@ -68,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // FORM DOĞRULAMA 
-    // İletişim sayfası için
     const form = document.getElementById('contact-form');
 
     if (form) {

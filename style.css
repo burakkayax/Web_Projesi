@@ -538,9 +538,13 @@ body.dark-mode .about-container {
 
 .skill-list {
     list-style: none;
+    /* Baştaki siyah noktaları kaldır */
     display: flex;
+    /* Elemanları yan yana diz, flexbox mevzusu */
     flex-wrap: wrap;
+    /* sığmayanları alt satıra atmak için */
     gap: 10px;
+    /* Kutucuklar birbirine yapışmasın, araları açık olsun */
 }
 
 .skill-item {
@@ -566,16 +570,19 @@ body.dark-mode .about-container {
 @keyframes fadeInUp {
     from {
         opacity: 0;
+        /* animsyon başladığında element görünmez */
         transform: translateY(20px);
+        /* element olması gereken yerden 20 piksel aşağıda başlasın */
     }
 
     to {
         opacity: 1;
         transform: translateY(0);
+        /* element 20 piksel aşağıdan kayarak orijinal konumuna gelsin */
     }
 }
 
-/* Bu sınıfı animasyon uygulamak istediğin kapsayıcılara (örneğin main içindeki sectionlara) ver */
+/* Bu sınıfı animasyon uygulamak istediğin kapsayıcılara (örneğin main içindeki sectionlara) vermek için */
 main section,
 .about-container,
 .contact-container {
