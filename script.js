@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // CSS'te tanımladığım .nav-active sınıfını aç/kapat
             nav.classList.toggle('nav-active');
 
-            // Hamburger ikonunu çarpı animasyon 
+            // Hamburger ikonunu çarpı animasyonu
             burger.classList.toggle('toggle');
 
             // Menü açılınca Header'ın stilini değiştirmek için sınıf ekledim
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeBtn = document.getElementById('theme-toggle');
     const body = document.body;
 
-    // Kullanıcının tercihini hatırla (Local Storage, sınıfın kullandığı zımbırtı)
+    // Kullanıcının tercihini hatırla (Local Storage, sunumdakilerin kullandığı zımbırtı)
     const currentTheme = localStorage.getItem('theme');
     if (currentTheme === 'dark') {
         body.classList.add('dark-mode');
