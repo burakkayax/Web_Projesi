@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Burak Kaya ile iletişime geçmek için hazırlanmış detaylı iletişim sayfası.">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>Burak Kaya | İletişim</title>
+    <link rel="icon" type="image/png" href="assets/icons/iletisim.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body data-page="contact-detail">
+    <a class="skip-link" href="#main-content">Ana içeriğe geç</a>
+
+    <header class="site-header">
+        <div class="container site-nav">
+            <a class="brand" href="index.html#home" aria-label="Burak Kaya ana sayfası">
+                <span class="brand-mark" aria-hidden="true">BK</span>
+                <span class="brand-text">
+                    <strong>Burak Kaya</strong>
+                    <span>Dijital profil</span>
+                </span>
+            </a>
+
+            <div class="nav-panel" id="primary-navigation" data-nav-panel>
+                <ul class="nav-list">
+                    <li><a href="index.html#home" data-nav-link>Ana Sayfa</a></li>
+                    <li><a href="index.html#about" data-nav-link>Hakkında</a></li>
+                    <li><a href="index.html#hobbies" data-nav-link>Hobiler</a></li>
+                    <li><a href="index.html#contact" data-nav-link>İletişim</a></li>
+                </ul>
+            </div>
+
+            <div class="site-nav__controls">
+                <button class="theme-toggle" type="button" data-theme-toggle aria-label="Temayı değiştir">
+                    <span class="theme-toggle__icon" data-theme-icon aria-hidden="true">☾</span>
+                    <span class="theme-toggle__label" data-theme-label>Koyu tema</span>
+                </button>
+
+                <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false"
+                    aria-controls="primary-navigation" aria-label="Menüyü aç">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" class="inner-page">
+        <section class="section page-intro" aria-labelledby="contact-page-title">
+            <div class="container page-intro__grid">
+                <div class="reveal">
+                    <p class="eyebrow">Detay Sayfası</p>
+                    <h1 id="contact-page-title">Fikirleri projelere, vizyonu gerçeğe dönüştürmek için tanışalım</h1>
+                    <p class="lead">Yapay zeka, bulut bilişim ve siber güvenlik alanlarındaki kariyer hedeflerim veya
+                        öğrenci topluluklarındaki organizasyon ve tasarım süreçleri hakkında konuşmak; olası iş
+                        birliklerini değerlendirmek için bana ulaşabilirsiniz.</p>
+
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="index.html#contact">Ana akıştaki iletişim bölümüne dön</a>
+                        <a class="btn btn-secondary" href="hakkinda.html">Profili incele</a>
+                    </div>
+                </div>
+
+                <article class="card card-emphasis reveal">
+                    <p class="card-label">Statik Mimari, Dinamik Deneyim</p>
+                    <h2>Bu proje backend içermediği için form gerçek mesaj göndermez.</h2>
+                    <p>İncelediğiniz bu proje şu an için bir front-end (ön yüz) vitrini olarak kurgulanmıştır. Aşağıdaki
+                        form alanı, form doğrulama (validation) ve UI/UX yetkinliklerimi sergilemek amaçlı bir demodur.
+                        Gerçek iletişim için doğrudan sosyal ağlarımı kullanabilirsiniz.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section-alt" aria-labelledby="contact-methods-title">
+            <div class="container contact-grid">
+                <div class="contact-copy reveal">
+                    <div class="section-header section-header--left">
+                        <p class="eyebrow">Alternatif Kanallar</p>
+                        <h2 id="contact-methods-title">Dijital kanallarım üzerinden doğrudan bağlantı kurun</h2>
+                        <p>Özellikle profesyonel ağ oluşturmak, etkinlik/kulüp organizasyonları hakkında görüşmek için
+                            LinkedIn'i; geliştirdiğim algoritmaları ve kodlama düzenimi incelemek için GitHub'ı tercih
+                            edebilirsiniz.</p>
+                    </div>
+
+                    <div class="contact-methods">
+                        <a class="contact-card" href="https://linkedin.com/in/burakkayain" target="_blank"
+                            rel="noopener noreferrer">
+                            <span class="contact-card__label">Profesyonel bağlantı</span>
+                            <strong>LinkedIn</strong>
+                            <span>Kariyer odaklı iletişim, etkinlikler ve iş birlikleri için</span>
+                        </a>
+
+                        <a class="contact-card" href="https://github.com/burakkayax" target="_blank"
+                            rel="noopener noreferrer">
+                            <span class="contact-card__label">Kod ve süreç</span>
+                            <strong>GitHub</strong>
+                            <span>Teknik altyapım, projelerim ve gelişim sürecim için</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card form-shell reveal">
+                    <form class="contact-form" id="contact-form" novalidate data-contact-form>
+                        <div class="field">
+                            <label for="name">Ad Soyad</label>
+                            <input type="text" id="name" name="name" autocomplete="name" required>
+                            <p class="field-error" id="name-error" aria-live="polite"></p>
+                        </div>
+
+                        <div class="field">
+                            <label for="email">E-posta</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                            <p class="field-error" id="email-error" aria-live="polite"></p>
+                        </div>
+
+                        <div class="field">
+                            <label for="message">Mesaj</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                            <p class="field-error" id="message-error" aria-live="polite"></p>
+                        </div>
+
+                        <p class="form-note">Bu alan kullanıcı deneyimini (UX) ve veri doğrulama senaryolarını test
+                            etmeniz için tasarlanmış statik bir demodur. Mesajınızın bana ulaşması için lütfen LinkedIn
+                            adresimi kullanın.</p>
+
+                        <div class="form-status" data-form-status hidden tabindex="-1" aria-live="polite"></div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Demo Gönderim Yap</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <p class="footer-title">Burak Kaya</p>
+                <p>Web Tasarımı ve Programlama dönem projesi için modernize edilmiş kişisel vitrin deneyimi</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="index.html#home">Ana Akış</a>
+                <a href="hakkinda.html">Profil Detay</a>
+                <a href="hobiler.html">Hobi Detay</a>
+            </div>
+
+            <div class="footer-links">
+                <a href="https://github.com/burakkayax" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://linkedin.com/in/burakkayain" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

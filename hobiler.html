@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Burak Kaya'nın sinema, oyun, felsefe, psikoloji ve teknoloji ilgilerini anlatan hobi sayfası.">
+    <meta name="theme-color" content="#f4f7f2">
+    <title>Burak Kaya | Hobiler</title>
+    <link rel="icon" type="image/png" href="assets/icons/hobi.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body data-page="hobbies-detail">
+    <a class="skip-link" href="#main-content">Ana içeriğe geç</a>
+
+    <header class="site-header">
+        <div class="container site-nav">
+            <a class="brand" href="index.html#home" aria-label="Burak Kaya ana sayfası">
+                <span class="brand-mark" aria-hidden="true">BK</span>
+                <span class="brand-text">
+                    <strong>Burak Kaya</strong>
+                    <span>Dijital profil</span>
+                </span>
+            </a>
+
+            <div class="nav-panel" id="primary-navigation" data-nav-panel>
+                <ul class="nav-list">
+                    <li><a href="index.html#home" data-nav-link>Ana Sayfa</a></li>
+                    <li><a href="index.html#about" data-nav-link>Hakkında</a></li>
+                    <li><a href="index.html#hobbies" data-nav-link>Hobiler</a></li>
+                    <li><a href="index.html#contact" data-nav-link>İletişim</a></li>
+                </ul>
+            </div>
+
+            <div class="site-nav__controls">
+                <button class="theme-toggle" type="button" data-theme-toggle aria-label="Temayı değiştir">
+                    <span class="theme-toggle__icon" data-theme-icon aria-hidden="true">☾</span>
+                    <span class="theme-toggle__label" data-theme-label>Koyu tema</span>
+                </button>
+
+                <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false"
+                    aria-controls="primary-navigation" aria-label="Menüyü aç">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" class="inner-page">
+        <section class="section page-intro" aria-labelledby="hobbies-page-title">
+            <div class="container page-intro__grid">
+                <div class="reveal">
+                    <p class="eyebrow">Detay Sayfası</p>
+                    <h1 id="hobbies-page-title">Gözlem, analiz ve tasarım vizyonumun arkasındaki düşünsel temel</h1>
+                    <p class="lead">Beni besleyen alanlar yalnızca boş zaman aktiviteleri değil; Yapay Zeka'dan arayüz
+                        tasarımına, topluluk yönetiminden problem çözme pratiğime kadar tüm üretim süreçlerimi doğrudan
+                        şekillendiren kaynaklardır.</p>
+
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="index.html#hobbies">Ana akıştaki hobi bölümüne dön</a>
+                        <a class="btn btn-secondary" href="index.html#contact">Benimle iletişime geç</a>
+                    </div>
+                </div>
+
+                <article class="card card-emphasis reveal">
+                    <p class="card-label">Bakış Açısı</p>
+                    <h2>Sistemi ve İnsanı Birlikte Okumak</h2>
+                    <p>Teknik bir projenin ardındaki mimariyi kurmakla, bir filmin atmosferini veya insan davranışının
+                        nedenlerini analiz etmek benim için aynı merakın farklı yansımaları. Yüzeyin altındaki
+                        katmanları görmek, bana daha analitik ve empati odaklı bir vizyon kazandırıyor.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section-alt" aria-labelledby="accordion-title">
+            <div class="container">
+                <div class="section-header reveal">
+                    <p class="eyebrow">Detaylı Alanlar</p>
+                    <h2 id="accordion-title">Başlıklara tıklayarak ayrıntıları inceleyin</h2>
+                    <p>Bu bölüm, daha sakin bir okuma deneyimi için erişilebilir ve tek-açık-öğe mantığıyla
+                        tasarlanmıştır.</p>
+                </div>
+
+                <div class="accordion" data-accordion>
+                    <article class="accordion-item is-open" id="sinema">
+                        <h2>
+                            <button class="accordion-trigger" id="accordion-button-sinema" type="button"
+                                aria-expanded="true" aria-controls="accordion-panel-sinema" data-accordion-trigger>
+                                <span>Sinema ve Oyun</span>
+                                <span class="accordion-icon" aria-hidden="true"></span>
+                            </button>
+                        </h2>
+                        <div class="accordion-panel" id="accordion-panel-sinema" role="region"
+                            aria-labelledby="accordion-button-sinema" data-accordion-panel>
+                            <div class="accordion-panel__inner">
+                                <img src="assets/images/sinema-oyun.webp" alt="Sinematik ışıklarla aydınlatılmış bir sinema sahnesi"
+                                    width="1400" height="764" loading="lazy" decoding="async">
+                                <p>Bir filmi ya da oyunu bitirdiğimde aklımda yalnızca final sahnesi kalmaz; kullanılan
+                                    renkler, atmosfer, karakterlerin iç gerilimi ve anlatımın ritmi de kalır. Benim
+                                    için bu alan sadece eğlence değil; anlatım biçimini okuma pratiğidir.</p>
+                                <p>Hikâyenin ne anlattığı kadar nasıl anlatıldığına da odaklanırım. Ayrıntıları fark
+                                    etmek, bu alanı benim için daha zengin ve kalıcı hale getiriyor.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="accordion-item" id="felsefe">
+                        <h2>
+                            <button class="accordion-trigger" id="accordion-button-felsefe" type="button"
+                                aria-expanded="false" aria-controls="accordion-panel-felsefe" data-accordion-trigger>
+                                <span>Felsefe ve Psikoloji</span>
+                                <span class="accordion-icon" aria-hidden="true"></span>
+                            </button>
+                        </h2>
+                        <div class="accordion-panel" id="accordion-panel-felsefe" role="region"
+                            aria-labelledby="accordion-button-felsefe" data-accordion-panel hidden>
+                            <div class="accordion-panel__inner">
+                                <img src="assets/images/felsefe-psikoloji.webp"
+                                    alt="Düşünce ve insan davranışlarını çağrıştıran karanlık tonlarda bir figür"
+                                    width="1400" height="764" loading="lazy" decoding="async">
+                                <p>İnsanın ne olduğu ve neden böyle davrandığı sorusu beni uzun süredir düşündürüyor.
+                                    Felsefe ve psikoloji, yüzeyde kaotik görünen davranışların altındaki yapıları daha
+                                    iyi görmemi sağlıyor.</p>
+                                <p>İnsan davranışlarını anlama merakım, siber güvenlikte 'sosyal mühendislik' kavramını
+                                    veya yapay zeka tasarımlarında 'insan-bilgisayar etkileşimini' kavramamı
+                                    kolaylaştırıyor. Sistemin sadece teknik kısmını değil, onu kullanan insan
+                                    psikolojisini de görebilmeyi önemsiyorum.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="accordion-item" id="teknoloji">
+                        <h2>
+                            <button class="accordion-trigger" id="accordion-button-teknoloji" type="button"
+                                aria-expanded="false" aria-controls="accordion-panel-teknoloji" data-accordion-trigger>
+                                <span>Teknoloji</span>
+                                <span class="accordion-icon" aria-hidden="true"></span>
+                            </button>
+                        </h2>
+                        <div class="accordion-panel" id="accordion-panel-teknoloji" role="region"
+                            aria-labelledby="accordion-button-teknoloji" data-accordion-panel hidden>
+                            <div class="accordion-panel__inner">
+                                <img src="assets/images/teknoloji.webp"
+                                    alt="Dijital ağ yapıları ve teknoloji ekranlarını anlatan bir kompozisyon"
+                                    width="1440" height="785" loading="lazy" decoding="async">
+                                <p>Teknoloji benim için yalnızca yeni cihazları tüketmek değil; geleceğin nasıl
+                                    kurulduğunu bugünden okumak anlamına geliyor. Verinin nasıl işlendiği, sistemlerin
+                                    nasıl korunduğu ve hangi mimarilerin hayatımızı dönüştürdüğü ilgimi çekiyor.</p>
+                                <p>YBu yüzden kariyerimi Yapay Zeka, Bulut Bilişim ve Siber Güvenlik üzerine inşa
+                                    ediyorum. Yeniliği uzaktan izleyen biri olmak yerine; bu değişimin mantığını
+                                    kavrayan ve geleceğin altyapılarını üreten tarafta yer almak için çalışıyorum.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <p class="footer-title">Burak Kaya</p>
+                <p>Web Tasarımı ve Programlama dönem projesi için modernize edilmiş kişisel vitrin deneyimi</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="index.html#home">Ana Akış</a>
+                <a href="hakkinda.html">Profil Detay</a>
+                <a href="iletisim.html">İletişim Detay</a>
+            </div>
+
+            <div class="footer-links">
+                <a href="https://github.com/burakkayax" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://linkedin.com/in/burakkayain" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
