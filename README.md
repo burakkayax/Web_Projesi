@@ -1,8 +1,30 @@
-# Burak Kaya Kişisel Web Sitesi
+# Burak Kaya Personal Portfolio
 
-Saf HTML, CSS ve JavaScript ile hazırlanmış statik kişisel web sitesi projesidir. Proje herhangi bir framework veya build aracı gerektirmez.
+Responsive, accessible and theme-aware personal portfolio built with semantic HTML, modern CSS and vanilla JavaScript.
 
-## Dosya Yapısı
+## Live Demo
+
+https://burakkayax.github.io/Web_Projesi/
+
+## Features
+
+- Semantic multi-page HTML structure
+- Responsive layout
+- Dark/light theme with localStorage persistence
+- Accessible mobile navigation
+- Accordion component with hash support
+- Client-side contact form validation
+- Optimized WebP images
+- No backend, no framework, no build step
+
+## Tech Stack
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Git & GitHub Pages
+
+## Architecture
 
 ```text
 .
@@ -15,26 +37,3 @@ Saf HTML, CSS ve JavaScript ile hazırlanmış statik kişisel web sitesi projes
 ├── js/
 │   └── script.js
 └── assets/
-    ├── icons/
-    └── images/
-        └── originals/
-```
-
-## Kullanım
-
-Dosyaları doğrudan tarayıcıda açabilirsiniz. Yerel sunucu ile çalıştırmak için:
-
-```bash
-python -m http.server 8000
-```
-
-Ardından `http://localhost:8000` adresini açın.
-
-## Özellikler
-
-- Responsive portfolyo düzeni
-- Açık/koyu tema desteği ve `localStorage` ile kalıcılık
-- Mobil navigasyon menüsü
-- Hash destekli accordion yapısı
-- Demo amaçlı iletişim formu doğrulaması
-- Optimize edilmiş görsel/favikon dosya yapısı
